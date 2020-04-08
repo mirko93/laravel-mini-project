@@ -1,15 +1,15 @@
 @extends('layout')
 
-@section('title', 'Customers List')
+@section('title', 'Add New Customer')
 
 @section('content')
     <div class="row">
         <div class="col-10">
-            <h1>Customers List</h1>
+            <h1>Add New Customer</h1>
         </div>
 
         <div class="col-10">
-            <form action="customers" method="POST">
+            <form action="/customers" method="POST">
 
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -50,49 +50,6 @@
 
     <hr>
 
-    <div class="row">
-        <div class="col-6">
-            <h2>Active Customers</h2>
-            <ul>
-                @foreach ($activeCustomers as $activeCustomer)
-                    <li>
-                        {{ $activeCustomer->name }}
-                        <span class="text-muted"> ({{ $activeCustomer->company->name }})</span>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-
-        <div class="col-6">
-            <h2>Inactive Customers</h2>
-            <ul>
-                @foreach ($inactiveCustomers as $inactiveCustomer)
-                    <li>
-                        {{ $inactiveCustomer->name }}
-                        <span class="text-muted"> ({{ $inactiveCustomer->company->name }})</span>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-        <div class="col-12">
-            @foreach ($companies as $company)
-                <h3>{{ $company->name }}</h3>
-
-                <ul>
-                    @foreach ($company->customers as $customer)
-                    <li>{{ $customer->name }}</li>
-                @endforeach
-                </ul>
-
-                <hr>
-
-            @endforeach
-        </div>
-    </div>
+    
 
 @endsection
