@@ -12,7 +12,12 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
     return view('home');
@@ -30,5 +35,6 @@ Route::post('contact', 'ContactFormController@store');
 // Route::get('customers/{customer}/edit', 'CustomersController@edit');
 // Route::patch('customers/{customer}', 'CustomersController@update');
 // Route::delete('customers/{customer}', 'CustomersController@destroy');
-
 Route::resource('customers', 'CustomersController');
+
+

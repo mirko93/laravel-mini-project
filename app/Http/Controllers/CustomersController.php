@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
+    // authentication - protect the viewing of private information
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
 
