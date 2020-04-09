@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::view('/', 'home');
+Route::view('/', 'home')->name('index');
 
-Route::view('about', 'about');
+Route::view('about', 'about')->name('about');
 
 Route::get('contact', 'ContactFormController@create')->name('contact.create');
 Route::post('contact', 'ContactFormController@store')->name('contact.store');;
