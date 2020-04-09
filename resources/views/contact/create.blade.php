@@ -5,7 +5,7 @@
 @section('content')
     <h1>Contact</h1>
 
-    <form action="/contact" method="POST">
+    <form action="{{ route('contact.store') }}" method="POST">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" class="form-control" value="{{ old('name') }}">

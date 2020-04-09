@@ -11,13 +11,16 @@
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
+                <a class="nav-link" href="{{ action('HomeController@index') }}">Dashboard</a>
+              </li>
+            <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/customers">Customers</a>
+              <a class="nav-link" href="/customers">Customer List</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contact">Contact</a>
